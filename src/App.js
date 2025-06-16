@@ -9,6 +9,10 @@ function App() {
   const [amount, setAmount] = useState("");
   const [balance, setBalance] = useState(null);
 
+
+  console.log("BACKEND_URL:", process.env.REACT_APP_BACKEND_URL);
+  console.log("RAZORPAY_KEY_ID:", process.env.REACT_APP_RAZORPAY_KEY_ID);
+
   const handleTopup = async () => {
     try {
       const res = await axios.post(`${BACKEND_URL}/create-order`, {
