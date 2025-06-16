@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const BACKEND_URL = process.env.BACKEND_URL;
-// For now pick test key, or you can conditionally select live/test
-const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID;
 
 function App() {
   const [userId, setUserId] = useState("abc123");
