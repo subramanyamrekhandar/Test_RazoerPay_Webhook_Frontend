@@ -18,6 +18,7 @@ function App() {
       const res = await axios.post(`${BACKEND_URL}/create-order`, {
         user_id: userId,
         amount: amount,
+        withCredentials: true,
       });
 
       const order = res.data;
